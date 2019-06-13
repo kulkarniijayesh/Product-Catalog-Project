@@ -20,3 +20,7 @@ let homePage =
 app.get("/",(req, res)=>{
     res.send(homePage);
 });
+
+app.get("/admin",(req, res)=>{
+    res.send("admin panel");
+});
