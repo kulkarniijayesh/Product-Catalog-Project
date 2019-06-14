@@ -4,10 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
-//Routers:
-var homeRouter_1 = require("./homeRouter");
-var app = express_1.default();
-app.use('/home', homeRouter_1.router);
-app.listen("8080", function () {
-    console.log("Catalog site running at : ", "http://localhost:8080");
+var homeHtml_1 = require("./homeHtml");
+exports.router = express_1.default.Router();
+exports.router.get('/', function (req, res) {
+    res.send(homeHtml_1.str);
 });
