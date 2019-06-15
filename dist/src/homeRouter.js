@@ -4,8 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
-var homeHtml_1 = require("./homeHtml");
+var homeHtml_1 = require("../views/homeHtml");
 exports.router = express_1.default.Router();
 exports.router.get('/', function (req, res) {
+    console.log("tr-" + homeHtml_1.num_war);
     res.send(homeHtml_1.str);
 });
